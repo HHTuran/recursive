@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int fibonacci(int a){
+    if ( a == 0 || a == 1){
+        return a;
+    }
+    else{
+        return fibonacci(a - 1) + fibonacci(a - 2);
+    }
+}
+
+int main() {
+    int sayi = 10, i;
+    fibonacci(sayi);
+    for(i = 1; i <= sayi; i++){
+        printf("%d\n", fibonacci(i));
+    }
+    return 0;
+}
