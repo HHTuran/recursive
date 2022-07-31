@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int yazdir(int n){
+    if (n >= 1){
+        yazdir(n - 1);
+        printf("%d ",n);
+    }
+}
+
+int main() {
+    int sayi = 45;
+    yazdir(sayi);
+    return 0;
+}
