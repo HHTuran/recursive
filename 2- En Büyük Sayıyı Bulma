@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int f(int dizi[], int a){
+    
+    if(a==1){
+        return dizi[0];
+    }
+    else{
+        int en_Buyuk = f(dizi, a - 1);
+        if (dizi[a - 1] > en_Buyuk){
+            return dizi[a - 1];
+        }
+        return en_Buyuk;
+    }
+}
+
+int main() {
+    int dizi[5]={5,6,467,50,45};
+
+    printf("%d", f(dizi, 5));
+    return 0;
+}
