@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int carpim_Tablo(a){
+    int i;
+    if (a <= 10){
+        for(i = 0; i <= 10; i++){
+            printf("%d ", a*i);
+        }
+        printf("\n");
+        return carpim_Tablo(a + 1);
+    }
+}
+
+int main() {
+    int sayi = 1;
+    carpim_Tablo(sayi);
+    return 0;
+}
