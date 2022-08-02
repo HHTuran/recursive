@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+
+void yazdir(char *n)
+{
+    if (*n)
+    {
+        yazdir(n+1);
+        printf("%c", *n);
+    }
+}
+
+int main() {
+    char kelime[256];
+    printf("kelimeyi giriniz: ");
+    scanf("%s", &kelime);
+    yazdir(kelime);
+    return 0;
+}
