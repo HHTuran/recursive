@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+
+int yazdir(int n, int m){
+    int i;
+    if(n % 2 == 0 && n < m){
+        for(i = 0; i <= n; i += 2){
+            printf("%d ", i);
+        }
+        printf("\n");
+        return yazdir(n - 1, m -= 2);
+    }
+
+    else if (n >= 1 && n < m){
+        for(i = 1; i <= n; i += 2){
+            printf("%d ", i);
+        }
+        printf("\n");
+        return yazdir(n - 1, m -= 2);
+    }
+}
+
+int main() {
+    int sayi1, sayi2;
+    printf("sayiyi giriniz: ");
+    scanf("%d", &sayi1);
+    sayi2 = sayi1 + 2;
+    yazdir(sayi1, sayi2);
+    return 0;
+}
