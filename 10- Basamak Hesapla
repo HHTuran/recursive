@@ -1,19 +1,18 @@
 #include <stdio.h>
 
-int basamak_Hesapla(int x, int i) {
+int yazdir(int sayi,int temp){
+    if(sayi != 0){
 
-    if(x < 10){
-        return i++;
+        temp += sayi%10;
+        return yazdir(sayi/10,temp);
     }
-    else{
-        return basamak_Hesapla(x / 10, i + 1);
-    }
+    printf("%d ",temp);
 }
 
 int main() {
-    int i = 1;
-    int sayi = 123456;
 
-    printf("%d ", basamak_Hesapla(sayi, i));
-    return 0;
+    int sayi;
+    printf("sayi girin:");
+    scanf("%d", &sayi);
+    yazdir(sayi,0);
 }
